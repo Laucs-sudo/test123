@@ -1,31 +1,30 @@
-yt-archiver
+YT-ARCHIVER
 
 Archive YouTube videos with full metadata. 
 Search for mirrors across 12 services.
 
-Install command:
+INSTALL COMMAND
 ```
-curl -fsSL https://raw.githubusercontent.com/Laucs-sudo/test123/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Laucs-sudo/test123/refs/heads/main/install.sh | bash
 ```
 
-Requirements:
+REQUIREMENTS
 Python 3
 yt-dlp
 ffmpeg
 Zenity
 
-Usage:
-Run ```youtubearchive``` followed by a video link.
+USAGE
+Run ```youtubearchive``` with a video link.
 Run ```yt-archive``` to start downloads.
 Add URLs to the channels file.
-The path is ```~/.local/share/yt-archiver/channels_to_download.txt```.
-Control archives from your terminal.
+The file resides at ```~/.local/share/yt-archiver/channels_to_download.txt```.
+Manage archives through your terminal.
 Progress bars show completion status.
 Zenity displays megabytes remaining.
-Use ```youtubearchive``` to check video existence.
-Twelve archive services provide results.
+Search for video existence with ```youtubearchive```.
+Find results from twelve archive services.
 The tools save info.json files for every video.
-Submit these files to archive collections.
-Keep your collection updated by running the command again.
+Submit files to archive collections.
 The archive file prevents duplicate downloads.
 Enjoy your saved content.
