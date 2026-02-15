@@ -1,0 +1,9 @@
+# yt-archive: Channel/Playlist URLs
+# Add one URL per line. Lines starting with # are ignored.
+#
+# Examples:
+# https://www.youtube.com/@ChannelName
+# https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxxxxx
+# https://www.youtube.com/playlist?list=PLxxxxxxxxxxxxxxxxxxxxxxxxx
+#
+# Add your URLs below:
