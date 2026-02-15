@@ -2,6 +2,39 @@
 import sys, re, urllib.request, json
 from concurrent.futures import ThreadPoolExecutor
 
+ASCII = r"""
+    _     _ _ _       _ 
+   | |   (_) | |     | |
+   | |__  _| | |__   | |
+   | '_ \| | | '_ \  | |
+   | | | | | | | | | |_|
+   |_| |_|_|_|_| |_| (_)
+"""
+
+HELP = f"""{ASCII}
+youtubearchive
+
+Usage: youtubearchive [vid_id_or_url]
+
+INFO:
+    vid_id_or_url       Specify the YouTube video ID or full URL.
+                        The script extracts the ID and searches.
+
+OPTIONS:
+    --help              Display this help menu.
+
+SEARCH SERVICES:
+    YouTube
+    Wayback
+    ArchiveDetails
+    GhostArchive
+    Hobune
+    Odysee
+
+NOTE: Parallel searching ensures fast results.
+Report bugs to your repository issues page.
+"""
+
 def get_id(text):
     m = re.search(r'v=([a-zA-Z0-9_-]{11})|^([a-zA-Z0-9_-]{11})$', text)
     return m.group(1) or m.group(2) if m else None
@@ -25,9 +58,14 @@ services = [
 ]
 
 def main():
-    if len(sys.argv) < 2: return
+    if len(sys.argv) < 2 or sys.argv[1] in ["--help", "-h"]:
+        print(HELP)
+        return
+    
     vid = get_id(sys.argv[1])
-    if not vid: return
+    if not vid:
+        print(HELP)
+        return
     
     print(f"Searching {vid}...")
     with ThreadPoolExecutor() as p:

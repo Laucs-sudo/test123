@@ -16,9 +16,9 @@ Zenity
 
 USAGE
 Run ```youtubearchive``` with a video link.
-Run ```yt-archive``` to start downloads.
+Run ```yt-archive --help``` to see options.
 Add URLs to the channels file.
-The file resides at ```~/.local/share/yt-archiver/channels_to_download.txt```.
+The file resides at ```~/.yt-channels.txt``` for the python version.
 Manage archives through your terminal.
 Progress bars show completion status.
 Zenity displays megabytes remaining.
